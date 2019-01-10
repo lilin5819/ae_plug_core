@@ -46,6 +46,7 @@ int main()
     loop = aeCreateEventLoop(20);
 
     ipfd = anetTcpNonBlockConnect(NULL,"127.0.0.1",8000);
+    // ipfd = anetUnixConnect(NULL,"/tmp/libae.sock");
     assert(ipfd != ANET_ERR);
     printf("connect ok\n");
 
